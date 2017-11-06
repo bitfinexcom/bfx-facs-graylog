@@ -1,11 +1,12 @@
 {
-  "name": "bfx-facs-base",
+  "name": "bfx-facs-graylog",
   "version": "0.0.1",
-  "private": false,
+  "private": true,
   "description": "Bitfinex Facility",
-  "author": {
-    "name": "prdn",
-    "email": "paolo@bitfinex.com"
+  "scripts": {
+    "test": "npm run lint && npm run unit",
+    "lint": "standard",
+    "unit": "mocha"
   },
   "keywords": [
     "bitfinex"
@@ -15,19 +16,20 @@
     "lodash": "~4.17.4"
   },
   "engine": {
-    "node": ">=6.0"
+    "node": ">=8.0"
   },
-  "main": "base.js",
+  "main": "graylog.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bitfinexcom/bfx-facs-base.git"
+    "url": "git+https://github.com/bitfinexcom/bfx-facs-graylog.git"
   },
-  "homepage": "https://github.com/bitfinexcom/bfx-facs-base",
-  "maintainers": [
-    {
-      "name": "prdn",
-      "email": "paolo@bitfinex.com"
-    }
-  ]
+  "author": {
+    "name": "Robert Kowalski",
+    "email": "robert@bitfinex.com"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "standard": "^10.0.3"
+  }
 }
