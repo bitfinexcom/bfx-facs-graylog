@@ -47,6 +47,12 @@ In your main worker, load the facility. For the service `bfx-util-net-js`, the f
 
 The `production` string matches to the key `production` in our config.json and enables us to run with multiple Graylog servers and configurations.
 
+The `0` means the priority in which the facility is started and stopped. `0` is pretty low, a facility with `100` gets started quite late. Negative values are also possible, some core functionalities run with a prio setting of `-10`.
+
+The empty hash `{}` are options we can pass at runtime (instead via config file).
+
+This facility supports custom message formatters. [The example is part of the config section.](#custom-formatters)
+
 ## Example Config
 
 ```js
@@ -87,6 +93,8 @@ process.on('unhandledRejection', sendStackToGraylog)
 process.on('warning', sendStackToGraylog)
 
 ```
+
+### Custom formatters
 
 To send custom messages with `registerUncaughtErrorHandlers` you can inject a custom formatter:
 
