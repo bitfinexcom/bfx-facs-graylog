@@ -4,15 +4,15 @@
   "private": true,
   "description": "Bitfinex Facility",
   "scripts": {
-    "test": "npm run lint && npm run unit",
-    "lint": "standard",
-    "unit": "mocha"
+    "test": "npm run lint",
+    "lint": "standard"
   },
   "keywords": [
     "bitfinex"
   ],
   "dependencies": {
     "async": "~2.4.0",
+    "gelf": "^2.0.0",
     "lodash": "~4.17.4"
   },
   "engine": {
@@ -29,7 +29,6 @@
     "email": "robert@bitfinex.com"
   },
   "devDependencies": {
-    "mocha": "^4.0.1",
     "standard": "^10.0.3"
   }
 }
